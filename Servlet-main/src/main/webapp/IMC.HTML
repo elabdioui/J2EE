@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calcul de l'IMC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-container {
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Calcul de l'Indice de Masse Corporelle</h2>
+        <form action="CalculDeMonImc" method="get">
+            <div class="form-group">
+                <label for="poids">Poids (kg):</label>
+                <input type="text" id="poids" name="poids" placeholder="Ex: 75">
+            </div>
+            <div class="form-group">
+                <label for="taille">Taille (m):</label>
+                <input type="text" id="taille" name="taille" placeholder="Ex: 1.75">
+            </div>
+            <button type="submit">Calculer mon IMC</button>
+        </form>
+    </div>
+</body>
+</html>
