@@ -48,7 +48,7 @@ public class ContactFacade {
 	    public void createContact(Contact c) {
 	        String sql = "INSERT INTO Contact (FIRSTNAME, LASTNAME, EMAIL, PHONE, ADDRESS) VALUES (?, ?, ?, ?, ?)";
 	        try (Connection conn = getConnection();
-	             PreparedStatement ps = conn.prepareStatement(sql)) {
+	           PreparedStatement ps = conn.prepareStatement(sql)) {
 	            ps.setString(1, c.getFirstname());
 	            ps.setString(2, c.getLastname());
 	            ps.setString(3, c.getEmail());
