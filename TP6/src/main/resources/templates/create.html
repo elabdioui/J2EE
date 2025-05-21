@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter une Catégorie</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h1>Ajouter une Nouvelle Catégorie</h1>
+
+    <form th:action="@{/categorie/save}" method="post">
+        <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" class="form-control" id="nom" name="nom" required>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+        <a th:href="@{/categorie/}" class="btn btn-secondary">Annuler</a>
+    </form>
+
+    <h3 class="mt-5">Catégories existantes</h3>
+    <div th:if="${categories.isEmpty()}" class="alert alert-info">
+        Aucune catégorie n'existe encore.
+    </div>
+
+    <table th:unless="${categories.isEmpty()}" class="table table-striped mt-3">
+        <thead class="thead-light">
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="categorie : ${categories}">
+            <td th:text="${categorie.id}"></td>
+            <td th:text="${categorie.nom}"></td>
+            <td th:text="${categorie.description}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

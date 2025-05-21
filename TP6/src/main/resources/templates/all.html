@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des Catégories</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h1>Liste des Catégories</h1>
+
+    <a th:href="@{/categorie/Create}" class="btn btn-primary mb-3">Ajouter une catégorie</a>
+
+    <div th:if="${categories.isEmpty()}" class="alert alert-warning">
+        Aucune catégorie disponible.
+    </div>
+
+    <table th:unless="${categories.isEmpty()}" class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="categorie : ${categories}">
+            <td th:text="${categorie.id}"></td>
+            <td th:text="${categorie.nom}"></td>
+            <td th:text="${categorie.description}"></td>
+            <td>
+                <a th:href="@{/film/(categorieId=${categorie.id})}" class="btn btn-info btn-sm">Films</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a th:href="@{/film/}" class="btn btn-secondary">Retour à la liste des films</a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
