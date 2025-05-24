@@ -14,7 +14,7 @@ import domaine.Etudiant;
 
 @WebServlet("/Supprimer")
 public class Supprimer extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+	
 	
 	private EtudiantDAO dao= new EtudiantDAO();
 
