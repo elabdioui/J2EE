@@ -12,17 +12,16 @@ public class ConnectionFactory {
 	 private  ConnectionFactory() {} 
 	   
 	 static { 
-	  try { 
-	   Class.forName("com.mysql.jdbc.Driver"); 
-	   cnx = DriverManager.getConnection(URL, USER_NAME, PASSWORD); 
-	 
-	  } catch (Exception ex) {} 
-	 } 
-	 
+		  try { 
+		   Class.forName("com.mysql.cj.jdbc.Driver");
+		   cnx = DriverManager.getConnection(URL, USER_NAME, PASSWORD); 
+		  } catch (Exception ex) {
+		   ex.printStackTrace(); 
+		  } 
+		}
 	 public static Connection getConnection() { 
 	      return cnx; 
 	    } 
-	 
 	 
 	 
 	}
