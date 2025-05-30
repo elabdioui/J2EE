@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Users\elabd\Desktop\formation\4IIR\S8\J2EE\TP\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+672183820.index
+3917971713.index
+3518346756.index
+2967756121.index
+3804401755.index
+1464377440.index
+1539508469.index

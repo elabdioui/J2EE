@@ -1,0 +1,9 @@
+INDEX VERSION 1.134
+C:\Users\elabd\Desktop\formation\4IIR\S8\J2EE\TP\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1251020832.index
+\TP4\src\main\java
+C:\Users\elabd\Desktop\formation\4IIR\S8\J2EE\TP\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\226249724.index
+\TP4\src\main\java
+C:\Users\elabd\Desktop\formation\4IIR\S8\J2EE\TP\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1464377440.index
+\TP3.1\src\main\java
+C:\Users\elabd\Desktop\formation\4IIR\S8\J2EE\TP\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\770586551.index
+\TP3\src\main\java
